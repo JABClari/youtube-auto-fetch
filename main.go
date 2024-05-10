@@ -46,7 +46,6 @@ func fetchLatestVideo(channelID string) (string, error) {
 	if err != nil {
 		return "", err
 	}
-	// fmt.Println("HTML Response Body:", string(body))
 
 	var videoResp VideoResponse
 	err = json.Unmarshal(body, &videoResp)
